@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-primary: #4263eb;
+  --brand-dark: #364fc7;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #c1c7d0;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a5adba;
+}
+
+/* Status badge animations */
+.status-badge {
+  @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold transition-all;
+}
+
+/* Card hover effect */
+.candidate-card {
+  @apply transition-all duration-200;
+}
+.candidate-card:hover {
+  @apply shadow-md -translate-y-0.5;
+}
+
+/* Score bar animation */
+.score-bar {
+  @apply h-2 rounded-full transition-all duration-500 ease-out;
+}
+
+/* Email template editor */
+.email-editor {
+  @apply min-h-[300px] font-mono text-sm;
+}
